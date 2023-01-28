@@ -8,10 +8,8 @@ namespace TrafficLight
 {
   class VendorB
   {
-    public bool Light;
     public void TurnLight(bool On )
     {
-      Light = On;
     }
 
   }

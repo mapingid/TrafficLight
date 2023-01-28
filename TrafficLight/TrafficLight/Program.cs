@@ -10,25 +10,18 @@ namespace TrafficLight
   {
     static void Main( string[] args )
     {
+      HandleVendorA Light1 = new HandleVendorA();
+      HandleVendorB Light2 = new HandleVendorB();
+      HandleVendorB Light3 = new HandleVendorB();
+      HandleVendorA Light4 = new HandleVendorA();
+      HandleVendorB Light5 = new HandleVendorB();
+      HandleVendorB Light6 = new HandleVendorB();
 
-      /*
-       * Phase0
-       * LAJUR A : HIJAU
-       * LAJUR B : MERAH
-       * LAJUR C : MERAH
-       * 
-       * Phase1
-       * LAJUR A : MERAH
-       * LAJUR B : HIJAU
-       * LAJUR C : MERAH
-       * 
-       * Phase2
-       * LAJUR A : MERAH
-       * LAJUR B : MERAH
-       * LAJUR C : HIJAU
-       */
+      Branch BranchA = new Branch( Light1, Light2 );
+      Branch BranchB = new Branch( Light3, Light4 );
+      Branch BranchC = new Branch( Light5, Light6 );
 
-      CrossRoad Pertigaan = new CrossRoad();
+      CrossRoad Pertigaan = new CrossRoad( BranchA, BranchB, BranchC );
       while( true )
       {
         Pertigaan.NextLight();

@@ -8,10 +8,10 @@ namespace TrafficLight
 {
   class VendorA
   {
-    public bool Light;
 
-    public void TurnOn() { Light = true; }
-    public void TurnOff() { Light = false; }
+
+    public void TurnOn() {  }
+    public void TurnOff() { }
 
   }
 }

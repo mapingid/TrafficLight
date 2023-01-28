@@ -12,17 +12,11 @@ namespace TrafficLight
     //menggunakan standar ini
     void TurnOn();
     void TurnOff();
-    string Display();
+
   }
 
   class HandleVendorA : ILight
   {
-    public string Color;
-    
-    public HandleVendorA(string _color)
-    {
-      Color = _color;
-    }
     VendorA light = new VendorA();
     public void TurnOn()
     {
@@ -32,16 +26,10 @@ namespace TrafficLight
     {
       light.TurnOff();
     }
-    public string Display() => $"Color : {Color} Status : {light.Light} Vendor : Vendor A";
   }
 
   class HandleVendorB : ILight
   {
-    public string Color;
-    public HandleVendorB( string _color )
-    {
-      Color = _color;
-    }
     VendorB light = new VendorB();
     public void TurnOn()
     {
@@ -51,7 +39,6 @@ namespace TrafficLight
     {
       light.TurnLight( false );
     }
-    public string Display() => $"Color : {Color} Status : {light.Light} Vendor : Vendor A";
   }
 
 
