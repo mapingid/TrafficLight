@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrossRoad.cs" />
+    <Compile Include="Light.cs" />
+    <Compile Include="LightTypeA.cs" />
+    <Compile Include="LightTypeB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
