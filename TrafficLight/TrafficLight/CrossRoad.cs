@@ -32,20 +32,41 @@ namespace TrafficLight
           break;
 
         case 1:
+          BranchA.YellowOn();
+          BranchB.RedOn();
+          BranchC.YellowOn();
+          break;
+
+        case 2:
           BranchA.GreenOn();
           BranchB.RedOn();
           BranchC.RedOn();
           break;
+        
+        case 3:
+          BranchA.YellowOn();
+          BranchB.YellowOn();
+          BranchC.RedOn();
+          break;
 
-        case 2:
+        case 4:
           BranchA.RedOn();
           BranchB.GreenOn();
           BranchC.RedOn();
           break;
+
+        case 5:
+          BranchA.RedOn();
+          BranchB.YellowOn();
+          BranchC.YellowOn();
+          break;
+
+
+
       }
 
       Phase++;
-      if( Phase > 2 ) Phase = 0;
+      if( Phase > 5 ) Phase = 0;
       Console.WriteLine( $"PHASE : {Phase}" );
     }
     public void Report()

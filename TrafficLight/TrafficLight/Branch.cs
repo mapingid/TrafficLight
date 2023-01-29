@@ -9,12 +9,14 @@ namespace TrafficLight
   class Branch
   {
     string BranchLightColor;
-    ILight redLight, greenLight;
+    ILight redLight, yelowLight, greenLight;
 
-    public Branch( ILight _redLight, ILight _greenLight )
+    public Branch( ILight _redLight, ILight _yellowLight, ILight _greenLight )
     {
       redLight = _redLight;
+      yelowLight = _yellowLight;
       greenLight = _greenLight;
+
     }
 
     public void RedOn()
@@ -28,6 +30,13 @@ namespace TrafficLight
       redLight.TurnOn();
       greenLight.TurnOff();
       BranchLightColor = "GREEN";
+    }
+    public void YellowOn()
+    {
+      redLight.TurnOff();
+      yelowLight.TurnOn();
+      greenLight.TurnOff();
+      BranchLightColor = "YELLOW";
     }
     public string GetColor() => BranchLightColor;
 
